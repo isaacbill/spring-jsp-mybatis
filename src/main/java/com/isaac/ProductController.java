@@ -75,18 +75,6 @@ public class ProductController {
 	        return "redirect:/products";
 	    }
 	
-//	 @GetMapping("/products/edit/{id}")
-//	    public String showEditProductForm(@PathVariable("id") Integer id, Model model) {
-//	     Products product = productService.getProductById(id);
-//	      model.addAttribute("product", product);
-//	      return "edit-product";
-//	 }
-//	 @PostMapping("/products/edit/{id}")
-//	 public String editProduct(@ModelAttribute("product") Products product) {
-//	     productService.editProduct(product);
-//	     return "redirect:/products";
-//	 }
-
 	    @GetMapping("/products/delete/{id}")
 	    public String deleteProduct(@PathVariable("id") Integer id) {
 	        productService.deleteProduct(id);
